@@ -4,7 +4,7 @@ var bodyParser = require('body-parser');
 var logger = require('morgan');
 var app = express();
 
-app.use(logger());
+app.use(logger('combined'));
 app.use(bodyParser.json());
 
 app.post('/run', run);
